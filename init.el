@@ -10,6 +10,9 @@
 ;; Adding window movement support
 (windmove-default-keybindings)
 
+;; Binding IMenu to M-i
+(global-set-key (kbd "M-i") 'imenu)
+
 ;; Installing MELPA
 
 (require 'package)
