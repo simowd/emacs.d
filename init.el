@@ -13,6 +13,30 @@
 ;; Binding IMenu to M-i
 (global-set-key (kbd "M-i") 'imenu)
 
+;; Setting helm keybindings
+;; Replacing M-x with helm-M-x
+;; (global-set-key (kbd "M-x") #'helm-M-x)
+;; Replacing bookmark keybinding with helm's keybinding
+;; (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+;; Replacing default file search with helm-find-files
+;; (global-set-key (kbd "C-x C-f") #'helm-find-files)
+
+;; Setting helm-mode globally
+;; (helm-mode 1)
+
+;; Setting IDO mode
+(ido-mode 1)
+;; Setting ido everywhere
+(setq ido-everywhere t)
+;; Enabling flex matching
+(setq ido-enable-flex-matching t)
+
+;; Windows only commands
+(if (eq system-type 'windows-nt)
+    ;; Change windows find with GNU find
+    (setenv "PATH" (concat "C:\\gnuwin32\\bin\\" path-separator (getenv "PATH")))
+)
+
 ;; Installing MELPA
 
 (require 'package)
