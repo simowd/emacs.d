@@ -13,6 +13,9 @@
 ;; Binding IMenu to M-i
 (global-set-key (kbd "M-i") 'imenu)
 
+;; Enabling Hippie Expand with the commands of DAbbrev
+(global-set-key [remap dabbrev-expand] 'hippie-expand)
+
 ;; Setting helm keybindings
 ;; Replacing M-x with helm-M-x
 ;; (global-set-key (kbd "M-x") #'helm-M-x)
@@ -54,7 +57,7 @@
  '(custom-safe-themes
    '("05626f77b0c8c197c7e4a31d9783c4ec6e351d9624aa28bc15e7f6d6a6ebd926" default))
  '(global-display-line-numbers-mode t)
- '(package-selected-packages '(helm dracula-theme)))
+ '(package-selected-packages '(dumb-jump whole-line-or-region helm dracula-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
